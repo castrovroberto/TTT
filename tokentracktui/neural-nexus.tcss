@@ -1,0 +1,500 @@
+/* 
+Neural Nexus Theme for TokenTrackTUI
+===================================
+
+Advanced styling system inspired by neural networks and cloud computing
+with sophisticated gradients, animations, and visual metaphors.
+*/
+
+/* === COLOR VARIABLES === */
+$neural-blue-dark: #1e3a8a;
+$neural-blue-light: #3b82f6;
+$neural-blue-subtle: #93c5fd;
+
+$cloud-silver-dark: #64748b;
+$cloud-silver-light: #f1f5f9;
+$cloud-silver-medium: #cbd5e1;
+
+$data-green-dark: #059669;
+$data-green-light: #10b981;
+$data-green-glow: #6ee7b7;
+
+$alert-amber-dark: #d97706;
+$alert-amber-light: #f59e0b;
+$alert-amber-glow: #fcd34d;
+
+$error-red-dark: #dc2626;
+$error-red-light: #ef4444;
+$error-red-glow: #fca5a5;
+
+$insight-purple-dark: #7c3aed;
+$insight-purple-light: #a855f7;
+$insight-purple-glow: #c4b5fd;
+
+/* === SEMANTIC COLOR ASSIGNMENTS === */
+$primary: $neural-blue-light;
+$primary-variant: $neural-blue-dark;
+$secondary: $insight-purple-light;
+$secondary-variant: $insight-purple-dark;
+
+$surface: #0f172a;
+$surface-variant: #1e293b;
+$surface-container: #334155;
+
+$text-primary: #f8fafc;
+$text-secondary: $cloud-silver-medium;
+$text-tertiary: $cloud-silver-dark;
+
+$success: $data-green-light;
+$warning: $alert-amber-light;
+$error: $error-red-light;
+
+$border-primary: $neural-blue-subtle;
+$border-secondary: $cloud-silver-dark;
+
+/* === GLOBAL APP STYLES === */
+App {
+    background: $surface;
+    color: $text-primary;
+}
+
+/* === SCREEN LAYOUTS === */
+Screen {
+    background: $surface;
+    color: $text-primary;
+}
+
+/* === NEURAL HEADER STYLING === */
+NeuralHeader {
+    height: 3;
+    background: $neural-blue-dark;
+    color: $text-primary;
+    text-style: bold;
+    padding: 1;
+    border-bottom: solid $border-primary;
+}
+
+NeuralHeader .title {
+    text-align: left;
+    text-style: bold;
+    color: $text-primary;
+}
+
+NeuralHeader .status {
+    text-align: right;
+    text-style: italic;
+    color: $cloud-silver-light;
+}
+
+/* === NEURAL FOOTER STYLING === */
+NeuralFooter {
+    height: 3;
+    background: $surface-variant;
+    color: $text-secondary;
+    padding: 1;
+    border-top: solid $border-secondary;
+}
+
+NeuralFooter .actions {
+    text-align: center;
+    color: $text-secondary;
+}
+
+/* === LOADING SCREEN === */
+LoadingScreen {
+    align: center middle;
+    background: $surface;
+}
+
+LoadingScreen .loading-container {
+    width: 60;
+    height: 12;
+    border: round $primary;
+    background: $surface-variant;
+    padding: 2;
+}
+
+LoadingScreen .loading-title {
+    text-align: center;
+    text-style: bold;
+    color: $primary;
+    margin-bottom: 1;
+}
+
+LoadingScreen .loading-subtitle {
+    text-align: center;
+    color: $secondary;
+    text-style: italic;
+    margin-bottom: 2;
+}
+
+LoadingScreen .loading-status {
+    text-align: center;
+    color: $text-secondary;
+    margin-top: 1;
+}
+
+LoadingIndicator {
+    color: $primary;
+}
+
+/* === DASHBOARD SCREEN === */
+DashboardScreen {
+    layout: vertical;
+    background: $surface;
+}
+
+DashboardScreen .content-area {
+    height: 1fr;
+    layout: vertical;
+    padding: 1;
+    background: $surface;
+}
+
+DashboardScreen .main-panels {
+    height: 1fr;
+    layout: horizontal;
+    margin-bottom: 1;
+}
+
+DashboardScreen .neural-graph-panel {
+    width: 1fr;
+    border: round $primary;
+    background: $surface-variant;
+    padding: 1;
+    margin-right: 1;
+}
+
+DashboardScreen .overview-panel {
+    width: 1fr;
+    border: round $secondary;
+    background: $surface-variant;
+    padding: 1;
+}
+
+DashboardScreen .status-bar {
+    height: 3;
+    background: $surface-container;
+    border: round $border-secondary;
+    padding: 1;
+}
+
+/* === CONTENT STYLING === */
+#graph-title {
+    text-style: bold;
+    color: $primary;
+    margin-bottom: 1;
+}
+
+#graph-content {
+    color: $text-primary;
+    margin-left: 1;
+}
+
+#overview-title {
+    text-style: bold;
+    color: $secondary;
+    margin-bottom: 1;
+}
+
+#overview-content {
+    color: $text-primary;
+    margin-left: 1;
+}
+
+#status-message {
+    color: $text-secondary;
+    text-align: center;
+}
+
+/* === CONTAINER STYLING === */
+Container {
+    background: transparent;
+}
+
+Horizontal {
+    background: transparent;
+}
+
+Vertical {
+    background: transparent;
+}
+
+/* === STATIC WIDGET STYLING === */
+Static {
+    background: transparent;
+    color: $text-primary;
+}
+
+/* === NEURAL NETWORK ELEMENTS === */
+.neural-node {
+    color: $primary;
+    text-style: bold;
+}
+
+.neural-connection {
+    color: $border-primary;
+}
+
+.neural-pulse {
+    color: $data-green-light;
+    text-style: bold;
+}
+
+.neural-inactive {
+    color: $cloud-silver-dark;
+}
+
+/* === PROVIDER STATUS INDICATORS === */
+.provider-active {
+    color: $success;
+    text-style: bold;
+}
+
+.provider-inactive {
+    color: $text-tertiary;
+}
+
+.provider-error {
+    color: $error;
+    text-style: bold;
+}
+
+.provider-warning {
+    color: $warning;
+}
+
+/* === DATA VISUALIZATION === */
+.sparkline-high {
+    color: $data-green-light;
+    text-style: bold;
+}
+
+.sparkline-medium {
+    color: $alert-amber-light;
+}
+
+.sparkline-low {
+    color: $cloud-silver-medium;
+}
+
+.cost-high {
+    color: $error-red-light;
+    text-style: bold;
+}
+
+.cost-medium {
+    color: $alert-amber-light;
+}
+
+.cost-low {
+    color: $data-green-light;
+}
+
+/* === METRIC STYLING === */
+.metric-value {
+    text-style: bold;
+    color: $text-primary;
+}
+
+.metric-label {
+    color: $text-secondary;
+    text-style: italic;
+}
+
+.metric-trend-up {
+    color: $data-green-light;
+    text-style: bold;
+}
+
+.metric-trend-down {
+    color: $error-red-light;
+    text-style: bold;
+}
+
+.metric-trend-stable {
+    color: $text-secondary;
+}
+
+/* === UNICODE GRAPHICS === */
+.unicode-border {
+    color: $border-primary;
+}
+
+.unicode-accent {
+    color: $secondary;
+}
+
+.unicode-highlight {
+    color: $primary;
+    text-style: bold;
+}
+
+/* === RESPONSIVE DESIGN === */
+/* Styles for narrow terminals (< 100 columns) */
+App.-narrow .main-panels {
+    layout: vertical;
+}
+
+App.-narrow .neural-graph-panel {
+    margin-right: 0;
+    margin-bottom: 1;
+}
+
+/* Styles for wide terminals (> 140 columns) */
+App.-wide .content-area {
+    padding: 2;
+}
+
+App.-wide .main-panels {
+    margin-bottom: 2;
+}
+
+/* === ANIMATION CLASSES === */
+.pulse {
+    text-style: bold;
+    color: $primary;
+}
+
+.glow {
+    color: $insight-purple-glow;
+    text-style: bold;
+}
+
+.fade {
+    color: $text-tertiary;
+}
+
+/* === ACCESSIBILITY === */
+/* High contrast mode */
+App.-high-contrast {
+    background: #000000;
+    color: #ffffff;
+}
+
+App.-high-contrast .neural-graph-panel,
+App.-high-contrast .overview-panel {
+    border: solid #ffffff;
+    background: #1a1a1a;
+}
+
+App.-high-contrast .status-bar {
+    background: #333333;
+    border: solid #ffffff;
+}
+
+/* Monochrome mode for better terminal compatibility */
+App.-monochrome * {
+    color: $text-primary !important;
+}
+
+App.-monochrome .neural-graph-panel,
+App.-monochrome .overview-panel {
+    border: solid $text-primary;
+}
+
+/* === FOCUS INDICATORS === */
+*:focus {
+    border: solid $primary;
+    background: $surface-container;
+}
+
+*:hover {
+    background: $surface-variant;
+}
+
+/* === SCROLLING ELEMENTS === */
+ScrollView {
+    background: transparent;
+}
+
+ScrollView:focus {
+    border: solid $primary;
+}
+
+/* === TABLE STYLING (for future data tables) === */
+DataTable {
+    background: $surface-variant;
+    color: $text-primary;
+    border: round $border-primary;
+}
+
+DataTable .header {
+    background: $neural-blue-dark;
+    color: $text-primary;
+    text-style: bold;
+}
+
+DataTable .cell {
+    color: $text-primary;
+}
+
+DataTable .cell:hover {
+    background: $surface-container;
+}
+
+/* === BUTTON STYLING === */
+Button {
+    background: $primary;
+    color: $text-primary;
+    border: none;
+    padding: 1 2;
+    text-style: bold;
+}
+
+Button:hover {
+    background: $primary-variant;
+}
+
+Button:focus {
+    border: solid $secondary;
+    background: $primary-variant;
+}
+
+Button.-secondary {
+    background: $secondary;
+}
+
+Button.-secondary:hover {
+    background: $secondary-variant;
+}
+
+/* === INPUT STYLING === */
+Input {
+    background: $surface-variant;
+    color: $text-primary;
+    border: solid $border-secondary;
+    padding: 1;
+}
+
+Input:focus {
+    border: solid $primary;
+    background: $surface-container;
+}
+
+/* === NOTIFICATION STYLING === */
+Notification {
+    background: $surface-container;
+    color: $text-primary;
+    border: round $border-primary;
+    padding: 1;
+}
+
+Notification.-information {
+    border: round $primary;
+}
+
+Notification.-warning {
+    border: round $warning;
+    background: #d9770615;
+}
+
+Notification.-error {
+    border: round $error;
+    background: #dc262615;
+}
+
+Notification.-success {
+    border: round $success;
+    background: #05966915;
+} 
